@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pit Lane News: notizie, analisi e risultati dal mondo della Formula 1.">
+  <title>Pit Lane News — Formula 1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline"><span>FORMULA 1 · NEWS · ANALYSIS</span><span id="today"></span></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Pit Lane News home">
+      <span class="brand-mark">PL<span>N</span></span>
+      <span class="brand-copy"><strong>PIT LANE NEWS</strong><small>THE RACE NEVER STOPS</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigazione principale">
+      <a href="#latest" data-i18n="navNews">Notizie</a>
+      <a href="#race" data-i18n="navRace">Gran Premi</a>
+      <a href="#standings" data-i18n="navStandings">Classifiche</a>
+      <a href="#about" data-i18n="navAbout">Chi siamo</a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-switch" id="langSwitch" aria-label="Switch language">EN</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Apri menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="Auto da corsa in pista"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-dot"></span><span data-i18n="heroTag">DENTRO IL PADDOCK</span></div>
+        <p class="hero-kicker" data-i18n="heroKicker">VELOCITÀ. STRATEGIA. PASSIONE.</p>
+        <h1 data-i18n="heroTitle">La Formula 1,<br><em>senza pause.</em></h1>
+        <p class="hero-desc" data-i18n="heroDesc">Le notizie, le analisi e le storie che fanno parlare il paddock.</p>
+        <a class="button button-red" href="#latest"><span data-i18n="heroButton">LEGGI LE NOTIZIE</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-label"><span>01</span> / PADDOCK REPORT</div>
+    </section>
+
+    <section class="ticker" aria-label="Temi principali">
+      <span class="ticker-label" data-i18n="tickerLabel">IN PRIMO PIANO</span>
+      <div class="ticker-track"><span>DRIVER MARKET</span><b>✦</b><span>RACE WEEKEND</span><b>✦</b><span>TECHNICAL INSIGHT</span><b>✦</b><span>CHAMPIONSHIP</span></div>
+    </section>
+
+    <section class="section" id="latest">
+      <div class="section-heading">
+        <div><p class="section-kicker" data-i18n="latestKicker">IL POLSO DEL PADDOCK</p><h2 data-i18n="latestTitle">Ultime <em>notizie</em></h2></div>
+        <span class="section-index">01 — NEWSROOM</span>
+      </div>
+      <div class="news-layout">
+        <article class="lead-card" id="leadCard"></article>
+        <div class="side-news" id="sideNews"></div>
+      </div>
+      <div class="news-grid" id="newsGrid"></div>
+    </section>
+
+    <section class="race-band" id="race">
+      <div class="race-copy">
+        <p class="section-kicker" data-i18n="raceKicker">IL PROSSIMO APPUNTAMENTO</p>
+        <h2 data-i18n="raceTitle">Pronti per<br><em>il prossimo GP?</em></h2>
+        <p data-i18n="raceDesc">Segui il weekend di gara con orari, aggiornamenti e risultati.</p>
+      </div>
+      <div class="race-placeholder">
+        <span class="race-number">F1</span>
+        <div><span class="race-small" data-i18n="racePlaceholder">CALENDARIO E RISULTATI</span><strong data-i18n="raceSoon">In arrivo</strong><small data-i18n="raceNote">Collega una fonte dati per aggiornare il calendario.</small></div>
+      </div>
+    </section>
+
+    <section class="section standings-section" id="standings">
+      <div class="section-heading">
+        <div><p class="section-kicker" data-i18n="standingsKicker">LA LOTTA AL TITOLO</p><h2 data-i18n="standingsTitle">Classifiche <em>F1</em></h2></div>
+        <span class="section-index">02 — CHAMPIONSHIP</span>
+      </div>
+      <div class="data-notice"><span class="notice-icon">i</span><p data-i18n="dataNotice">Le classifiche qui sono un segnaposto: prima della pubblicazione, collegare una fonte dati affidabile e aggiornata.</p></div>
+      <div class="standings-panels">
+        <div class="standings-card"><div class="standings-title"><span data-i18n="drivers">PILOTI</span><span>01</span></div><div class="empty-table" data-i18n="connectData">Collega i dati per visualizzare la classifica.</div></div>
+        <div class="standings-card"><div class="standings-title"><span data-i18n="constructors">COSTRUTTORI</span><span>02</span></div><div class="empty-table" data-i18n="connectData">Collega i dati per visualizzare la classifica.</div></div>
+      </div>
+    </section>
+
+    <section class="newsletter" id="about">
+      <div><p class="section-kicker" data-i18n="aboutKicker">OLTRE LA BANDIERA A SCACCHI</p><h2 data-i18n="aboutTitle">Ogni storia merita<br>la <em>pole position.</em></h2></div>
+      <p data-i18n="aboutDesc">Pit Lane News è un progetto editoriale indipendente per chi vive la Formula 1 tra notizie, analisi e passione. Contenuti in italiano e inglese, con fonti verificate e aggiornamenti trasparenti.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="footer-brand" href="#">PIT LANE NEWS<span>© <span id="year"></span></span></a><p data-i18n="footerNote">Progetto indipendente. Non affiliato a Formula 1 o FIA.</p><a href="#top" data-i18n="backTop">TORNA SU ↑</a></footer>
+  <dialog id="articleDialog" class="article-dialog"><button class="dialog-close" id="dialogClose" aria-label="Chiudi">×</button><div id="articleBody"></div></dialog>
+  <script src="news.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
